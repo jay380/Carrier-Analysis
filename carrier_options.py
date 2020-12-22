@@ -73,7 +73,7 @@ def carrier_op(carrier, n):
                                                         'BuyDiscount': 'sum', 'BuyFule': 'sum'})
         exla.rename(columns={'TOTALWEIGHT': 'Shipments'}, inplace=True)
 
-        weight_bins = segment_df(exla)   ## calling the above function
+        weight_bins = segment_df(exla)   ## using the above function
         weight_bins = weight_bins.reset_index().rename(columns={'index': 'Weights'})
         weight_bins.set_index('Weights', inplace=True)
 
